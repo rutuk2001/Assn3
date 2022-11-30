@@ -1,0 +1,40 @@
+{{> navbar}}
+ <div class="container p-5">
+
+        <h2 class="display-6 text-center"><b>Login Form</b></h2><br><br><br>
+
+        <form method="post" action="/user/login">
+
+            {{#if errPwdMsg}}
+            <div class="alert alert-danger">{{errPwdMsg}}</div>
+            {{/if}}
+
+            {{#if succsMsg}}
+            <div class="alert alert-success">{{succsMsg}}</div>
+            {{/if}}
+
+            {{#if errEmlMsg}}
+            <div class="alert alert-danger">{{errEmlMsg}}</div>
+            {{/if}}
+
+            <div class="form-floating mb-3">
+                <label>Email</label>
+                <input type="email" name="emailId" class="form-control" placeholder="name@example.com">
+               
+            </div>
+
+            <div class="form-floating mb-3">
+                <label>password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+                
+            </div>
+            
+
+            <div class="form-group mb-3">
+                <input type="submit" value="Log In" class="btn btn-success">
+            </div>
+
+        </form>
+    </div>
+
+{{> footer}}
